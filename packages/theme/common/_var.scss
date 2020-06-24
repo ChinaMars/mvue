@@ -1,0 +1,84 @@
+/* Color */
+$color-white: #fff !default;
+$color-black: #000 !default;
+$color-primary: $color-black !default;
+
+$color-primary-light-1: mix($color-white, $color-primary, 10%) !default; // #1a1a1a
+$color-primary-light-2: mix($color-white, $color-primary, 20%) !default; // #333333
+$color-primary-light-3: mix($color-white, $color-primary, 30%) !default; // #4d4d4d
+$color-primary-light-4: mix($color-white, $color-primary, 40%) !default; // #666666
+$color-primary-light-5: mix($color-white, $color-primary, 50%) !default; // #808080
+$color-primary-light-6: mix($color-white, $color-primary, 60%) !default; // #999999
+$color-primary-light-7: mix($color-white, $color-primary, 70%) !default; // #b3b3b3
+$color-primary-light-8: mix($color-white, $color-primary, 80%) !default; // #cccccc
+$color-primary-light-9: mix($color-white, $color-primary, 90%) !default; // #e6e6e6
+
+/* Background */
+$background-color-base: $color-black !default;
+
+/* Font */
+$font-color-default: #606266 !default;
+
+$font-size-default: 14px !default;
+$font-size-small: 12px !default;
+$font-size-medium: 16px !default;
+$font-size-large: 18px !default;
+
+$font-weight-default: 500 !default;
+
+/* Border */
+$border-color-default: #dcdfe6 !default;
+$border-color-light: $color-primary !default;
+
+$border-radius-default: 4px !default;
+
+/* Button */
+$button-default-background-color: $color-white !default;
+$button-primary-background-color: $color-primary !default;
+
+$button-default-font-color: $font-color-default !default;
+$button-primary-font-color: $color-white !default;
+
+$button-font-size: $font-size-default !default;
+
+$button-default-border-color: $border-color-default !default;
+$button-primary-border-color: $border-color-light !default;
+
+/* Loading */
+$loading-font-color-default: $color-white !default;
+
+/* Toast */
+$toast-background-color-default: $background-color-base !default;
+$toast-font-color-default: $color-white !default;
+
+/* Select */
+$select-font-size-default: $font-size-default !default;
+$select-option-background-color: #f5f7fa !default;
+
+/* Dialog */
+$dialog-background-color: $color-white !default;
+$dialog-title-font-size: $font-size-large !default;
+
+/* Message Box */
+$message-box-background-color: $color-white !default;
+$message-box-title-font-size: $font-size-large !default;
+
+/* Pagination */
+$pagination-button-color: #7f828b !default;
+$pagination-button-hover-color: $color-primary !default;
+$pagination-button-disabled-color: $color-primary-light-8 !default;
+$pagination-page-background-color: #f4f4f5 !default;
+$pagination-page-hover-background-color: $color-primary !default;
+$pagination-page-actived-background-color: $color-primary !default;
+$pagination-page-hover-color: $color-white !default;
+$pagination-page-actived-color: $color-white !default;
+
+/* Tabs */
+$tabs-bar-line-color: $color-primary !default;
+$tabs-bar-font-color: $font-color-default !default;
+$tabs-bar-font-size: $font-size-medium !default;
+$tabs-bar-actived-color: $color-primary !default;
+
+/* Drawer */
+$drawer-background-color: $color-white !default;
+

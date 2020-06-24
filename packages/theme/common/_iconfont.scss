@@ -1,0 +1,51 @@
+@font-face {
+  font-display: block;
+  font-family: 'mvue-icons';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../theme/fonts/mvue-icons.eot?c9azy4');
+  src:  url('../../theme/fonts/mvue-icons.eot?c9azy4#iefix') format('embedded-opentype'),
+  url('../../theme/fonts/mvue-icons.ttf?c9azy4') format('truetype'),
+  url('../../theme/fonts/mvue-icons.woff?c9azy4') format('woff'),
+  url('../../theme/fonts/mvue-icons.svg?c9azy4#mvue-icons') format('svg');
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'mvue-icons' !important;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.icon-mv-close::before {
+  content: '\e900';
+}
+
+.icon-mv-loading::before {
+  content: '\e901';
+}
+
+.icon-mv-arrow-down::before {
+  content: '\e902';
+}
+
+.icon-mv-arrow-up::before {
+  content: '\e903';
+}
+
+.icon-mv-arrow-left::before {
+  content: '\e904';
+}
+
+.icon-mv-arrow-right::before {
+  content: '\e905';
+}
