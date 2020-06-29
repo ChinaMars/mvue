@@ -1,8 +1,41 @@
+code-background-color = #fafafa
+code-font-color = #000000
+code-border-color = #eaeefb
+
+.demo-block{
+  border: 1px solid code-border-color;
+  border-radius: 3px;
+  transition: .2s;
+  margin-bottom: 24px;
+  &:hover{
+    box-shadow: 0 0 8px 0 rgba(232, 237, 250, .6), 0 2px 4px 0 rgba(232, 237, 250, .5);
+  }
+  .source{
+    padding: 24px
+  }
+  .demo-block-control{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
 .code-content{
+  background-color: code-background-color;
+  border-top: 1px solid code-border-color;
+  overflow: hidden;
+  height: 0;
+  transition: height .2s;
   pre{
-    background: #fafafa;
+    background: code-background-color;
+    margin: 0;
+    padding: 0;
     code{
-      color: #000000;
+      color: code-font-color;
+      padding: 18px 24px;
+      font-size: 12px;
+      line-height: 1.8;
     }
   }
 }
