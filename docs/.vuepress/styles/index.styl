@@ -2,11 +2,30 @@ code-background-color = #fafafa
 code-font-color = #000000
 code-border-color = #eaeefb
 
+.content{
+  > .title{
+    margin-bottom: 50px;
+    h1{
+      margin: 0;
+      font-size: 28px;
+    }
+  }
+}
+
+.demo{
+  margin-top: 54px;
+  .title{
+    h2{
+      font-size: 22px;
+      border: none;
+    }
+  }
+}
+
 .demo-block{
   border: 1px solid code-border-color;
   border-radius: 3px;
   transition: .2s;
-  margin-bottom: 24px;
   &:hover{
     box-shadow: 0 0 8px 0 rgba(232, 237, 250, .6), 0 2px 4px 0 rgba(232, 237, 250, .5);
   }

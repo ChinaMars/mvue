@@ -1,13 +1,13 @@
 <template>
   <div class="content">
-    <demo-title slot="title">
+    <demo-title>
       <h1 slot="title-name">Button 按钮</h1>
-      <span slot="des">常用的操作按钮。</span>
+      <p slot="des">常用的操作按钮。</p>
     </demo-title>
     <demo-block>
       <demo-title slot="use-title">
         <h2 slot="title-name">基础用法</h2>
-        <span slot="des">基础的按钮用法。</span>
+        <p slot="des">基础的按钮用法。</p>
       </demo-title>
       <mv-button @click.native="handleClick" slot="code">按钮</mv-button>
       <template slot="codeStr">{{codeStr.code1}}</template>
@@ -15,7 +15,7 @@
     <demo-block>
       <demo-title slot="use-title">
         <h2 slot="title-name">禁用状态</h2>
-        <span slot="des">按钮不可用状态</span>
+        <p slot="des">按钮不可用状态</p>
       </demo-title>
       <mv-button disabled slot="code">按钮</mv-button>
       <template slot="codeStr">{{codeStr.code2}}</template>
