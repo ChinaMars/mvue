@@ -1,6 +1,30 @@
 code-background-color = #fafafa
 code-font-color = #000000
 code-border-color = #eaeefb
+table-border-color = #dfe2e5
+
+.theme-default-content{
+  > h3{
+    margin: 55px 0 20px !important;
+    padding: 0 !important;
+  }
+  table{
+    display: table;
+    width: 100%;
+    tr{
+      border-bottom: 1px solid table-border-color;
+      border-top: none;
+      &:nth-child(2n){
+        background: transparent;
+      }
+    }
+    th,td{
+      border: none;
+      text-align: left;
+      padding: 15px;
+    }
+  }
+}
 
 .content{
   > .title{

@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content button-content">
     <demo-title>
       <h1 slot="title-name">Button 按钮</h1>
       <p slot="des">常用的操作按钮。</p>
@@ -9,7 +9,10 @@
         <h2 slot="title-name">基础用法</h2>
         <p slot="des">基础的按钮用法。</p>
       </demo-title>
-      <mv-button @click.native="handleClick" slot="code">按钮</mv-button>
+      <template slot="code">
+        <mv-button @click.native="handleClick">按钮</mv-button>
+        <mv-button :type-style="`primary`">按钮</mv-button>
+      </template>
       <template slot="codeStr">{{codeStr.code1}}</template>
     </demo-block>
     <demo-block>
@@ -32,11 +35,15 @@ export default {
       codeStr: {
         code1: `
           <mv-button @click.native="handleClick">按钮</mv-button>
+          <mv-button :type-style="buttonStyle">按钮</mv-button>
           <script>
             export default {
+              data() {
+                buttonStyle: 'primary'
+              },
               methods: {
                 handleClick () {
-                  console.log("2222")
+                  alert('按钮点击事件')
                 }
               }
             }
@@ -49,8 +56,16 @@ export default {
   mixins: [mixin],
   methods: {
     handleClick () {
-      console.log("2222")
+      alert('按钮点击事件')
     }
   }
 }
 </script>
+
+<style lang="scss">
+.button-content{
+  .mv-button{
+    margin-right: 10px;
+  }
+}
+</style>
