@@ -1,3 +1,5 @@
+const setAlias = require('../../config/setAlias')
+
 module.exports = {
   title: 'Mvue Ui',
   description: 'Mvue ui',
@@ -11,9 +13,13 @@ module.exports = {
       {
         title: "组件",
         children: [
-          '/components/button'
+          '/components/button',
+          '/components/dialog',
         ]
       }
     ]
+  },
+  chainWebpack: config => {
+    setAlias(config)
   }
 }

@@ -1,7 +1,8 @@
 <template>
-  <div v-clickoutside="handleClose"
-       class="mv-select"
-       @click="toggleSelect"
+  <div
+    v-clickoutside="handleClose"
+    class="mv-select"
+    @click="toggleSelect"
   >
     <div
       class="mv-select-input"
@@ -12,23 +13,34 @@
         :placeholder="currentPlaceholder"
         :disabled="disabled"
         @focus="handleFocus"
-      ></mv-input>
+      />
       <span class="mv-select-icon">
-        <mv-icon name="mv-arrow-down"></mv-icon>
+        <mv-icon name="mv-arrow-down" />
       </span>
     </div>
     <transition name="mv-select-fade-down">
-      <div v-show="visible" :class="{'auto': !iScrollBar}" class="mv-select-down">
+      <div
+        v-show="visible"
+        :class="{'auto': !iScrollBar}"
+        class="mv-select-down"
+      >
         <mv-scrollbar
           v-if="iScrollBar"
           :complete="domDon"
         >
-          <ul ref="selectOptions" class="mv-option-wrap">
-            <slot></slot>
+          <ul
+            ref="selectOptions"
+            class="mv-option-wrap"
+          >
+            <slot />
           </ul>
         </mv-scrollbar>
-        <ul v-else ref="selectOptions" class="mv-option-wrap">
-          <slot></slot>
+        <ul
+          v-else
+          ref="selectOptions"
+          class="mv-option-wrap"
+        >
+          <slot />
         </ul>
       </div>
     </transition>

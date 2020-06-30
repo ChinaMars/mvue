@@ -7,20 +7,31 @@
       class="mv-dialog-wrap"
       @click.self="handleWrapClick()"
     >
-      <div class="mv-dialog" :style="style">
+      <div
+        class="mv-dialog"
+        :style="style"
+      >
         <div class="mv-dialog-header">
           <slot name="title">
-            <div class="mv-dialog-title">{{ title }}</div>
+            <div class="mv-dialog-title">
+              {{ title }}
+            </div>
           </slot>
-          <div class="mv-dialog-close" @click="handleClose">
-            <mv-icon name="mv-close"></mv-icon>
+          <div
+            class="mv-dialog-close"
+            @click="handleClose"
+          >
+            <mv-icon name="mv-close" />
           </div>
         </div>
         <div class="mv-dialog-body">
-          <slot></slot>
+          <slot />
         </div>
-        <div v-if="$slots.footer" class="mv-dialog-footer">
-          <slot name="footer"></slot>
+        <div
+          v-if="$slots.footer"
+          class="mv-dialog-footer"
+        >
+          <slot name="footer" />
         </div>
       </div>
     </div>
@@ -101,6 +112,9 @@ export default {
     },
     hideDialog (res) {
       if (res) { // 监听是否关闭之前的事件执行完成
+        this.$emit('update:visible', false)
+        this.$emit('closed')
+      } else {
         this.$emit('update:visible', false)
         this.$emit('closed')
       }

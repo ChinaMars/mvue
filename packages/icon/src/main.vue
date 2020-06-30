@@ -1,5 +1,8 @@
 <template>
-  <i class="icon" :class="className"></i>
+  <i
+    class="icon"
+    :class="className"
+  />
 </template>
 
 <script>

@@ -1,6 +1,9 @@
 <template>
-  <div ref="scrollbar" class="mv-scrollbar">
-    <slot></slot>
+  <div
+    ref="scrollbar"
+    class="mv-scrollbar"
+  >
+    <slot />
   </div>
 </template>
 

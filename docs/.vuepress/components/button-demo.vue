@@ -18,9 +18,20 @@
     <demo-block>
       <demo-title slot="use-title">
         <h2 slot="title-name">禁用状态</h2>
-        <p slot="des">按钮不可用状态</p>
+        <p slot="des">按钮不可用状态。</p>
       </demo-title>
       <mv-button disabled slot="code">按钮</mv-button>
+      <template slot="codeStr">{{codeStr.code2}}</template>
+    </demo-block>
+    <demo-block>
+      <demo-title slot="use-title">
+        <h2 slot="title-name">图标按钮</h2>
+        <p slot="des">带图标的按钮（有文字或者无文字）。</p>
+      </demo-title>
+      <template slot="code">
+        <mv-button :icon="`icon-mv-loading`" :type-style="`primary`">加载</mv-button>
+        <mv-button :icon="`icon-mv-loading`" :type-style="`primary`"></mv-button>
+      </template>
       <template slot="codeStr">{{codeStr.code2}}</template>
     </demo-block>
   </div>
@@ -31,7 +42,6 @@ import mixin from '../src/mixin'
 export default {
   data() {
     return {
-      isExpanded: false,
       codeStr: {
         code1: `
           <mv-button @click.native="handleClick">按钮</mv-button>

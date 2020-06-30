@@ -1,4 +1,3 @@
-
 const fs = require('fs')
 const render = require('json-templater/string')
 const endOfLine = require('os').EOL

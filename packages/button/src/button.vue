@@ -5,8 +5,14 @@
     :class="`mv-button-${typeStyle}`"
     @click="handleClick"
   >
-    <i v-if="icon" :class="icon" class="icon"></i>
-    <span v-if="$slots.default"><slot></slot></span>
+    <i
+      v-if="icon"
+      :class="icon"
+      class="icon"
+    />
+    <span v-if="$slots.default">
+      <slot />
+    </span>
   </button>
 </template>
 

@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "eslint src/**/* packages/**/* build/**/* docs/**/* --fix --quiet --no-error-on-unmatched-pattern",
+    "lint": "eslint --fix src/**/* packages/**/* build/**/* docs/**/* --quiet --no-error-on-unmatched-pattern",
     "build:file": "cross-env node ./build/build.entry.js",
     "build:lib": "cross-env node ./build/build.lib.js",
     "docs:dev": "vuepress dev docs",

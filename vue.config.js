@@ -1,9 +1,4 @@
-const alias = require('./config/alias')
-const setAlias = (config) => {
-  Object.keys(alias).forEach((key) => {
-    config.resolve.alias.set(key, alias[key])
-  })
-}
+const setAlias = require('./config/setAlias')
 
 module.exports = {
   productionSourceMap: false,

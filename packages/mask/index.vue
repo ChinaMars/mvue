@@ -1,6 +1,10 @@
 <template>
   <transition name="mv-mask-fade">
-    <div v-if="visible" class="mv-mask" :style="{'z-index': zIndex}"></div>
+    <div
+      v-if="visible"
+      class="mv-mask"
+      :style="{'z-index': zIndex}"
+    />
   </transition>
 </template>
 

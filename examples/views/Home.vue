@@ -14,7 +14,12 @@
       <div class="scroll-text">
         <mv-scrollbar :complete="scrollBar">
           <ul>
-            <li v-for="(item, index) in 50" :key="index">滚动内容{{ item }}</li>
+            <li
+              v-for="(item, index) in 50"
+              :key="index"
+            >
+              滚动内容{{ item }}
+            </li>
           </ul>
         </mv-scrollbar>
       </div>
@@ -30,7 +35,10 @@
       <div class="dialog-content">
         dialog 组件
       </div>
-      <div slot="footer" class="dialog-footer-content">
+      <div
+        slot="footer"
+        class="dialog-footer-content"
+      >
         <mv-button
           @click.native="handleBtnClick"
         >
