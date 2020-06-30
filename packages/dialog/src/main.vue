@@ -144,8 +144,10 @@ export default {
       justify-content: center;
     }
 
-    .mv-dialog-auto {
-      margin: 100px auto 50px;
+    &.mv-dialog-auto {
+      .mv-dialog{
+        margin: 100px auto 50px;
+      }
     }
 
     .mv-dialog {
