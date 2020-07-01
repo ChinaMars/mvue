@@ -16,6 +16,8 @@ module.exports = {
         children: [
           '/components/button',
           '/components/dialog',
+          '/components/icon',
+          '/components/input'
         ]
       }
     ]

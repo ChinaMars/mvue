@@ -32,6 +32,9 @@ export default {
     }
   },
   computed: {
+    getInput () {
+      return this.$refs.input
+    },
     inputClass () {
       const className = [
         { 'is-disabled': this.disabled }
@@ -44,8 +47,9 @@ export default {
 
     }
   },
-  created () {
-
+  mounted() {
+    const input = this.getInput
+    input.value = this.value
   },
   methods: {
     handleInput (event) {
