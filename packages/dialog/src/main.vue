@@ -113,10 +113,10 @@ export default {
     hideDialog (res) {
       if (res) { // 监听是否关闭之前的事件执行完成
         this.$emit('update:visible', false)
-        this.$emit('closed')
+        this.$emit('close')
       } else {
         this.$emit('update:visible', false)
-        this.$emit('closed')
+        this.$emit('close')
       }
     },
     handleWrapClick () {

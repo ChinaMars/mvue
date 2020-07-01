@@ -16,6 +16,8 @@
           title="提示"
           :visible.sync="dialogVisible"
           :position="dialogPosition"
+          :width="`40%`"
+          :close-by-mask="false"
         >
           <div class="dialog-content">
             dialog 组件
@@ -42,7 +44,7 @@
     </demo-block>
     <demo-block>
       <demo-title slot="use-title">
-        <h2 slot="title-name">关闭对话框执行事件</h2>
+        <h2 slot="title-name">关闭对话框后执行事件</h2>
         <p slot="des">有时需要关闭对话框后，执行一些别的事件。</p>
       </demo-title>
       <template slot="code">
@@ -50,7 +52,7 @@
         <mv-dialog
           title="提示"
           :visible.sync="closeDialogVisible"
-          @closed="handleClosed"
+          @close="handleClosed"
         >
           <div class="dialog-content">
             dialog 组件
@@ -75,6 +77,41 @@
       </template>
       <template slot="codeStr">{{codeStr.code2}}</template>
     </demo-block>
+    <demo-block>
+      <demo-title slot="use-title">
+        <h2 slot="title-name">关闭对话框之前执行事件</h2>
+        <p slot="des">有时需要关闭对话框之前，执行一些别的事件，然后关闭对话框。</p>
+      </demo-title>
+      <template slot="code">
+        <mv-button @click.native="beforeCloseDialogVisible = true">点击打开 Dialog</mv-button>
+        <mv-dialog
+          title="提示"
+          :visible.sync="beforeCloseDialogVisible"
+          :before-close="handleBeforeClose"
+        >
+          <div class="dialog-content">
+            dialog 组件
+          </div>
+          <div
+            slot="footer"
+            class="dialog-footer-content"
+          >
+            <mv-button
+              @click.native="beforeCloseDialogVisible = false"
+            >
+              取消
+            </mv-button>
+            <mv-button
+              :type-style="`primary`"
+              @click.native="beforeCloseDialogVisible = false"
+            >
+              确定
+            </mv-button>
+          </div>
+        </mv-dialog>
+      </template>
+      <template slot="codeStr">{{codeStr.code3}}</template>
+    </demo-block>
   </div>
 </template>
 
@@ -85,6 +122,8 @@ export default {
     return {
       dialogVisible: false,
       closeDialogVisible: false,
+      beforeCloseDialogVisible: false,
+      dialogPosition: 'auto',
       codeStr: {
         code1: `
           <mv-button @click.native="baseDialogVisible">点击打开 Dialog</mv-button>
@@ -94,6 +133,8 @@ export default {
             title="提示"
             :visible.sync="dialogVisible"
             :position="dialogPosition"
+            :width="\`40%\`"
+            :close-by-mask="false"
           >
             <div class="dialog-content">
               dialog 组件
@@ -119,7 +160,8 @@ export default {
             export default {
               data() {
                 return {
-                  dialogVisible: false
+                  dialogVisible: false,
+                  dialogPosition: 'auto'
                 }
               },
               methods: {
@@ -141,7 +183,7 @@ export default {
           <mv-dialog
             title="提示"
             :visible.sync="closeDialogVisible"
-            @closed="handleClosed"
+            @close="handleClosed"
           >
             <div class="dialog-content">
               dialog 组件
@@ -178,13 +220,71 @@ export default {
             }
           <\/script>
         `,
+        code3: `
+          <mv-button @click.native="beforeCloseDialogVisible = true">点击打开 Dialog</mv-button>
+
+          <mv-dialog
+            title="提示"
+            :visible.sync="beforeCloseDialogVisible"
+            :before-close="handleBeforeClose"
+          >
+            <div class="dialog-content">
+              dialog 组件
+            </div>
+            <div
+              slot="footer"
+              class="dialog-footer-content"
+            >
+              <mv-button
+                @click.native="beforeCloseDialogVisible = false"
+              >
+                取消
+              </mv-button>
+              <mv-button
+                :type-style="\`primary\`"
+                @click.native="beforeCloseDialogVisible = false"
+              >
+                确定
+              </mv-button>
+            </div>
+          </mv-dialog>
+          <script>
+            export default {
+              data() {
+                return {
+                  beforeCloseDialogVisible: false,
+                }
+              },
+              methods: {
+                handleBeforeClose(callback) {
+                  alert('dialog 关闭之前执行的事件，这里模拟了事件执行了2秒，等事件执行完毕后关闭对话框。')
+                  setTimeout(() => {
+                    const flag = true
+                    if (callback) {
+                      callback(flag)
+                    }
+                  }, 2000)
+                }
+              }
+            }
+          <\/script>
+        `
       }
     }
   },
   mixins: [mixin],
   methods: {
-    handleClosed () {
-      alert('dialog 关闭后执行的alert事件')
+    handleClosed() {
+      alert('dialog 关闭后执行的alert事件。')
+    },
+    handleBeforeClose(callback) {
+      alert('dialog 关闭之前执行的事件，这里模拟了事件执行了2秒，等事件执行完毕后关闭对话框。')
+      setTimeout(() => {
+        const flag = true
+        if (callback) {
+          callback(flag)
+        }
+      }, 2000)
     },
     baseDialogVisible() {
       this.dialogVisible = true
