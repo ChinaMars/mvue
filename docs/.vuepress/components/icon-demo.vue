@@ -23,24 +23,24 @@
 </template>
 
 <script>
-  import mixin from '../src/mixin'
-  export default {
-    data() {
-      return {
-        codeStr: {
-          code1: `
-            <mv-icon name="mv-loading" />
-            <mv-icon name="mv-close" />
-            <mv-icon name="mv-arrow-down" />
-            <mv-icon name="mv-arrow-up" />
-            <mv-icon name="mv-arrow-left" />
-            <mv-icon name="mv-arrow-right" />
-        `
-        }
+import mixin from '../src/mixin'
+export default {
+  data() {
+    return {
+      codeStr: {
+        code1: `
+          <mv-icon name="mv-loading" />
+          <mv-icon name="mv-close" />
+          <mv-icon name="mv-arrow-down" />
+          <mv-icon name="mv-arrow-up" />
+          <mv-icon name="mv-arrow-left" />
+          <mv-icon name="mv-arrow-right" />
+      `
       }
-    },
-    mixins: [mixin]
-  }
+    }
+  },
+  mixins: [mixin]
+}
 </script>
 
 <style lang="scss">

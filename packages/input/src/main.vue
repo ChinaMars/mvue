@@ -9,6 +9,7 @@
       class="mv-input-inner"
       @focus="handleFocus"
       @input="handleInput"
+      @blur="handleBlur"
     >
   </div>
 </template>
@@ -53,10 +54,13 @@ export default {
   },
   methods: {
     handleInput (event) {
-      this.$emit('input', event.target.value)
+      this.$emit('input', event)
     },
     handleFocus (event) {
-      this.$emit('focus', event.target.value)
+      this.$emit('focus', event)
+    },
+    handleBlur (event) {
+      this.$emit('blur', event)
     }
   }
 }
