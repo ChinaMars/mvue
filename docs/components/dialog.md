@@ -6,7 +6,7 @@ title: Dialog 对话框
   <dialog-demo></dialog-demo>
 </ClientOnly>
 
-### 属性
+### Dialog 属性
 
 | 参数              | 说明                          | 类型      | 可选值           | 默认值   |
 |-----------------|-----------------------------|---------|---------------|-------|
@@ -17,7 +17,7 @@ title: Dialog 对话框
 | close\-by\-mask | Dialog是否通过遮罩层关闭             | boolean | true / false  | true  |
 | z\-index        | Dialog自定义层级                 | number  | —             | 1001  |
 
-### Slot
+### Dialog Slot
 
 | slot 名 | 说明                  |
 |--------|---------------------|
@@ -25,7 +25,7 @@ title: Dialog 对话框
 | title  | Dialog 的标题          |
 | footer | Dialog 的底部内容，一般显示按钮 |
 
-### 事件
+### Dialog 事件
 
 | 事件名称  | 说明           | 回调参数 |
 |-------|--------------|------|

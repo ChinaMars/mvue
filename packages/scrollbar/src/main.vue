@@ -20,23 +20,24 @@ export default {
       type: Boolean,
       default: false
     },
-    iScrollToTop: {
-      type: Boolean,
-      default: false
+    options: {
+      type: Object,
+      default: () => {}
     }
   },
   data () {
     return {
       bScroll: null,
-      options: {
-        scrollY: true,
+      initOptions: {
         click: true,
-        taps: true,
+        tap: true,
         scrollbar: {
-          fade: true,
+          fade: false,
           interactive: true
         },
-        mouseWheel: true
+        mouseWheel: {
+          easeTime: 500
+        }
       }
     }
   },
@@ -60,8 +61,9 @@ export default {
 
   },
   mounted () {
+    this.initOptions = Object.assign({}, this.initOptions, this.options)
     this.$nextTick(() => {
-      this.bScroll = new BScroll(this.$refs.scrollbar, this.options)
+      this.bScroll = new BScroll(this.$refs.scrollbar, this.initOptions)
     })
   }
 }
