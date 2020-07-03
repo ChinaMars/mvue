@@ -11,6 +11,15 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: '指南',
+        collapsable: false,
+        children: [
+          '/guide/',
+          '/guide/install',
+          '/guide/use'
+        ]
+      },
+      {
         title: "组件",
         collapsable: false,
         children: [

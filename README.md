@@ -1,29 +1,9 @@
-# mvue
+# mvue-ui
 
-## Project setup
+## Install
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install mvue-ui --save-dev
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 文档
+See [文档](https://dazzling-raman-09827a.netlify.app/).
