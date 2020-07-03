@@ -31,5 +31,9 @@ module.exports = {
   select: {
     input: 'packages/select/index.js',
     output: 'select'
+  },
+  option: {
+    input: 'packages/option/index.js',
+    output: 'option'
   }
 }

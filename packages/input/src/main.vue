@@ -45,7 +45,8 @@ export default {
   },
   watch: {
     value (val) {
-
+      const input = this.getInput
+      input.value = val
     }
   },
   mounted() {
@@ -54,7 +55,7 @@ export default {
   },
   methods: {
     handleInput (event) {
-      this.$emit('input', event)
+      this.$emit('input', event.target.value)
     },
     handleFocus (event) {
       this.$emit('focus', event)

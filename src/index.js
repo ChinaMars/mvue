@@ -6,6 +6,7 @@ import Icon from '../packages/icon/index.js'
 import Input from '../packages/input/index.js'
 import Scrollbar from '../packages/scrollbar/index.js'
 import Select from '../packages/select/index.js'
+import Option from '../packages/option/index.js'
 
 const components = [
   Button,
@@ -14,7 +15,8 @@ const components = [
   Icon,
   Input,
   Scrollbar,
-  Select
+  Select,
+  Option
 ]
 
 const install = Vue => {
@@ -36,5 +38,6 @@ export default {
   Icon,
   Input,
   Scrollbar,
-  Select
+  Select,
+  Option
 }

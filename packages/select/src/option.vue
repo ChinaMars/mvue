@@ -67,6 +67,8 @@ export default {
 <style lang="scss">
   @import '../../theme/common/var.scss';
   .mv-option-wrap {
+    margin: 0;
+    padding: 0;
     .mv-option {
       color: $font-color-default;
       cursor: pointer;
@@ -74,6 +76,7 @@ export default {
       height: 34px;
       line-height: 34px;
       padding: 0 20px;
+      list-style: none;
 
       &.selected {
         background: $select-option-background-color;

@@ -18,7 +18,8 @@ module.exports = {
           '/components/dialog',
           '/components/icon',
           '/components/input',
-          '/components/scrollbar'
+          '/components/scrollbar',
+          '/components/select'
         ]
       }
     ]

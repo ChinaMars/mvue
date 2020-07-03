@@ -8,7 +8,7 @@
       class="mv-select-input"
     >
       <mv-input
-        v-model="value"
+        v-model="query"
         :readonly="readonly"
         :placeholder="currentPlaceholder"
         :disabled="disabled"
@@ -91,7 +91,7 @@ export default {
       domDon: false,
       visible: false,
       readonly: true,
-      currentLabel: null,
+      query: '',
       currentPlaceholder: null,
       cachePlaceholder: null
     }
@@ -121,7 +121,7 @@ export default {
     },
     value (newVal) {
       if (newVal === '') {
-        this.currentPlaceholder = this.cachePlaceholder
+        this.query = this.cachePlaceholder
       }
     }
   },
@@ -141,8 +141,8 @@ export default {
       if (this.visible) {
         this.toggleSelect()
       }
-      this.currentPlaceholder = option.label
-      this.$emit('input', option.value)
+      this.query = option.label
+      this.$emit('input', option.value) // 把真实的 input value 暴露到组件上，组件上通过v-model来双向绑定
     },
     handleClose () {
       this.visible = false
