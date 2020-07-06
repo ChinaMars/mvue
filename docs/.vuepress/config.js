@@ -28,7 +28,8 @@ module.exports = {
           '/components/icon',
           '/components/input',
           '/components/scrollbar',
-          '/components/select'
+          '/components/select',
+          '/components/checkbox'
         ]
       }
     ]

@@ -6,5 +6,7 @@
   "input": "./packages/input/index.js",
   "scrollbar": "./packages/scrollbar/index.js",
   "select": "./packages/select/index.js",
-  "option": "./packages/option/index.js"
+  "option": "./packages/option/index.js",
+  "checkbox": "./packages/checkbox/index.js",
+  "checkbox-group": "./packages/checkbox-group/index.js"
 }

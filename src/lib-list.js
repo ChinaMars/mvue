@@ -35,5 +35,13 @@ module.exports = {
   option: {
     input: 'packages/option/index.js',
     output: 'option'
+  },
+  checkbox: {
+    input: 'packages/checkbox/index.js',
+    output: 'checkbox'
+  },
+  'checkbox-group': {
+    input: 'packages/checkbox-group/index.js',
+    output: 'checkbox-group'
   }
 }

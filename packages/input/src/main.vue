@@ -10,6 +10,7 @@
       @focus="handleFocus"
       @input="handleInput"
       @blur="handleBlur"
+      @change="handleChange"
     >
   </div>
 </template>
@@ -54,14 +55,17 @@ export default {
     input.value = this.value
   },
   methods: {
-    handleInput (event) {
+    handleInput(event) {
       this.$emit('input', event.target.value)
     },
-    handleFocus (event) {
+    handleFocus(event) {
       this.$emit('focus', event)
     },
-    handleBlur (event) {
+    handleBlur(event) {
       this.$emit('blur', event)
+    },
+    handleChange (event) {
+      this.$emit('change', event)
     }
   }
 }

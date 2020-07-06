@@ -111,7 +111,7 @@ export default {
         value: 1,
         label: '钢铁侠'
       }],
-      value: '',
+      value: 1,
       address: {
         regionModel: '',
         cityModel: '',

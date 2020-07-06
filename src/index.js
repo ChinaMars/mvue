@@ -7,6 +7,8 @@ import Input from '../packages/input/index.js'
 import Scrollbar from '../packages/scrollbar/index.js'
 import Select from '../packages/select/index.js'
 import Option from '../packages/option/index.js'
+import Checkbox from '../packages/checkbox/index.js'
+import CheckboxGroup from '../packages/checkbox-group/index.js'
 
 const components = [
   Button,
@@ -16,7 +18,9 @@ const components = [
   Input,
   Scrollbar,
   Select,
-  Option
+  Option,
+  Checkbox,
+  CheckboxGroup
 ]
 
 const install = Vue => {
@@ -39,5 +43,7 @@ export default {
   Input,
   Scrollbar,
   Select,
-  Option
+  Option,
+  Checkbox,
+  CheckboxGroup
 }
