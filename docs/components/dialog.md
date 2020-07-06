@@ -17,7 +17,7 @@ title: Dialog 对话框
 | close\-by\-mask | Dialog是否通过遮罩层关闭             | boolean | true / false  | true  |
 | z\-index        | Dialog自定义层级                 | number  | —             | 1001  |
 
-### Dialog Slot
+### Dialog Slots
 
 | slot 名 | 说明                  |
 |--------|---------------------|

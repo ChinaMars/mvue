@@ -13,6 +13,11 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ChinaMars/mvue.git"
+  },
+  "homepage": "https://dazzling-raman-09827a.netlify.app",
   "files": [
     "lib",
     "src",

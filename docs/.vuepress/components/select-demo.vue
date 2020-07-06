@@ -48,7 +48,7 @@
     <demo-block>
       <demo-title slot="use-title">
         <h2 slot="title-name">省市区三级联动</h2>
-        <p slot="des">填写地址时常见的省市区选择。</p>
+        <p slot="des">填写地址时常见的省市区选择。<a href="/mock/address.json">省市区json格式</a></p>
       </demo-title>
       <template slot="code">
         <mv-select
@@ -91,7 +91,7 @@
           ></mv-option>
         </mv-select>
       </template>
-      <template slot="codeStr"></template>
+      <template slot="codeStr">{{codeStr.code3}}</template>
     </demo-block>
   </div>
 </template>
@@ -187,6 +187,112 @@ export default {
                   label: '钢铁侠'
                 }],
                 value: ''
+                }
+              }
+            }
+          <\/script>
+        `,
+        code3: `
+          <mv-select
+            v-model="address.regionModel"
+            :placeholder="address.region.placeholder"
+            :disabled="address.region.disabled"
+            :scroll-bar="scrollBar"
+          >
+            <mv-option
+              v-for="(item, Itemindex) in address.region.options"
+              :key="Itemindex"
+              :label="item.name"
+              :value="item.code"
+            ></mv-option>
+          </mv-select>
+          <mv-select
+            v-model="address.cityModel"
+            :placeholder="address.city.placeholder"
+            :disabled="address.city.disabled"
+            :scroll-bar="scrollBar"
+          >
+            <mv-option
+              v-for="(item, Itemindex) in address.city.options"
+              :key="Itemindex"
+              :label="item.name"
+              :value="item.code"
+            ></mv-option>
+          </mv-select>
+          <mv-select
+            v-model="address.districtModel"
+            :placeholder="address.district.placeholder"
+            :disabled="address.district.disabled"
+            :scroll-bar="scrollBar"
+          >
+            <mv-option
+              v-for="(item, Itemindex) in address.district.options"
+              :key="Itemindex"
+              :label="item.name"
+              :value="item.code"
+            ></mv-option>
+          </mv-select>
+          <script>
+            export default {
+              data() {
+                return {
+                  scrollBar: true,
+                  address: {
+                    regionModel: '',
+                    cityModel: '',
+                    districtModel: '',
+                    region: {
+                      placeholder: '请选择省',
+                      disabled: false,
+                      options: {}
+                    },
+                    city: {
+                      placeholder: '请选择市',
+                      disabled: true,
+                      options: {}
+                    },
+                    district: {
+                      placeholder: '请选择区',
+                      disabled: true,
+                      options: {}
+                    }
+                  }
+                }
+              },
+              watch: {
+                'address.regionModel': {
+                  immediate: true,
+                  handler (value) {
+                    const allAddress = address.data
+                    this.address.cityModel = ''
+                    this.address.districtModel = ''
+                    if (value !== '') {
+                      this.address.city.disabled = false
+                    } else {
+                      this.address.city.disabled = true
+                    }
+                    for (const i in allAddress.region) {
+                      for (const key in allAddress.region[i]) {
+                        if (allAddress.region[i][key].code === value) {
+                          this.address.city.options = allAddress.city[key]
+                        }
+                      }
+                    }
+                  }
+                },
+                'address.cityModel': {
+                  handler: function(newVal) {
+                    const allAddress = address.data
+                    this.address.districtModel = ''
+                    this.address.district.disabled = false
+                    for (const i in allAddress.district) {
+                      for (const key in allAddress.district[i]) {
+                        if (allAddress.district[i][key].code === newVal) {
+                          this.address.district.options = allAddress.district[key]
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
