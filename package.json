@@ -49,7 +49,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "highlight.js": "^10.1.1",
     "json-templater": "^1.2.0",
-    "mvue-ui": "^0.1.4",
+    "mvue-ui": "^0.1.5",
     "node-sass": "^4.14.1",
     "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",

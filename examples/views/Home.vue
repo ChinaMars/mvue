@@ -57,6 +57,13 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import { Button, Scrollbar, Dialog } from 'mvue-ui';
+
+Vue.use(Button)
+Vue.use(Scrollbar)
+Vue.use(Dialog)
+
 export default {
   name: 'Home',
   data () {
