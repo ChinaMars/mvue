@@ -16,6 +16,7 @@
         <mv-icon name="mv-arrow-up" />
         <mv-icon name="mv-arrow-left" />
         <mv-icon name="mv-arrow-right" />
+        <mv-icon name="mv-selected" />
       </template>
       <template slot="codeStr">{{codeStr.code1}}</template>
     </demo-block>
@@ -35,7 +36,7 @@ export default {
           <mv-icon name="mv-arrow-up" />
           <mv-icon name="mv-arrow-left" />
           <mv-icon name="mv-arrow-right" />
-      `
+        `
       }
     }
   },

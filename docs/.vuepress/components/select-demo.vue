@@ -98,7 +98,7 @@
 
 <script>
 import mixin from '../src/mixin'
-import address from '../public/mock/address'
+import address from '../public/assets/mock/address'
 
 export default {
   data() {

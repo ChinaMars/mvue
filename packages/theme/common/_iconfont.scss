@@ -26,26 +26,26 @@
   text-transform: none;
 }
 
-.icon-mv-close::before {
-  content: '\e900';
-}
-
-.icon-mv-loading::before {
-  content: '\e901';
-}
-
-.icon-mv-arrow-down::before {
-  content: '\e902';
-}
-
-.icon-mv-arrow-up::before {
-  content: '\e903';
-}
-
-.icon-mv-arrow-left::before {
-  content: '\e904';
-}
-
-.icon-mv-arrow-right::before {
-  content: '\e905';
+.icon {
+  &-mv-close::before {
+    content: '\e900';
+  }
+  &-mv-loading::before {
+    content: '\e901';
+  }
+  &-mv-arrow-down::before {
+    content: '\e902';
+  }
+  &-mv-arrow-up::before {
+    content: '\e903';
+  }
+  &-mv-arrow-left::before {
+    content: '\e904';
+  }
+  &-mv-arrow-right::before {
+    content: '\e905';
+  }
+  &-mv-selected::before {
+    content: '\e906';
+  }
 }

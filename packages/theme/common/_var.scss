@@ -25,6 +25,7 @@ $font-size-medium: 16px !default;
 $font-size-large: 18px !default;
 
 $font-weight-default: 500 !default;
+$font-weight-bold: 600 !default;
 
 /* Border */
 $border-color-default: #dcdfe6 !default;
@@ -81,4 +82,8 @@ $tabs-bar-actived-color: $color-primary !default;
 
 /* Drawer */
 $drawer-background-color: $color-white !default;
+
+/* Checkbox */
+$checkbox-icon-size: 14px !default;
+$checkbox-label-font: $font-size-default !default;
 

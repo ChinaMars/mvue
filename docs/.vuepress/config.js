@@ -3,7 +3,11 @@ const setAlias = require('../../config/setAlias')
 module.exports = {
   title: 'Mvue Ui',
   description: 'Mvue，基于 Vue 2.0 Cli3 的桌面端组件库',
+  head: [
+    ['link', { rel: "icon", type: "image/png", sizes: "32x28", href: "/assets/favicons/favicon-32x28.png"}],
+  ],
   themeConfig: {
+    logo: '/assets/img/logo.png',
     lastUpdated: 'Last Updated',
     nav: [
       {text: '指南', link: '/guide/'},
