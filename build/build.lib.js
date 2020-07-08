@@ -25,6 +25,10 @@ Object.keys(libList).forEach((name) => {
 
 pkgArray.forEach(build)
 
+rimraf(getAssetsPath(outputPath, 'demo.html'), (err) => {
+  console.log(err)
+})
+
 if (!fsExistsSync(getAssetsPath(outputPath, styleOutputPath))) {
   fs.mkdirSync(getAssetsPath(outputPath, styleOutputPath))
 }

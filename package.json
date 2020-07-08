@@ -8,8 +8,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "eslint --fix src/**/* packages/**/* build/**/* docs/**/* --quiet --no-error-on-unmatched-pattern",
+    "clean": "rimraf lib",
     "build:file": "node ./build/build.entry.js",
-    "build:lib": "npm run build:file && cross-env NODE_ENV=production rimraf ./lib && node ./build/build.lib.js",
+    "build:lib": "npm run clean && npm run build:file && cross-env NODE_ENV=production node ./build/build.lib.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },

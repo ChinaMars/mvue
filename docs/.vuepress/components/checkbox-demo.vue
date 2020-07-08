@@ -9,7 +9,7 @@
         <h2 slot="title-name">基础用法</h2>
       </demo-title>
       <template slot="code">
-        <mv-checkbox v-model="checked">复选框</mv-checkbox>
+        <mv-checkbox v-model="checked" name="checkbox">复选框</mv-checkbox>
       </template>
       <template slot="codeStr">{{codeStr.code1}}</template>
     </demo-block>

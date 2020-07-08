@@ -9,6 +9,7 @@ import Select from '../packages/select/index.js'
 import Option from '../packages/option/index.js'
 import Checkbox from '../packages/checkbox/index.js'
 import CheckboxGroup from '../packages/checkbox-group/index.js'
+import Toast from '../packages/toast/index.js'
 
 const components = [
   Button,
@@ -20,7 +21,8 @@ const components = [
   Select,
   Option,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  Toast
 ]
 
 const install = Vue => {
@@ -45,5 +47,6 @@ export default {
   Select,
   Option,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  Toast
 }

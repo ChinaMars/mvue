@@ -43,5 +43,9 @@ module.exports = {
   'checkbox-group': {
     input: 'packages/checkbox-group/index.js',
     output: 'checkbox-group'
+  },
+  toast: {
+    input: 'packages/toast/index.js',
+    output: 'toast'
   }
 }

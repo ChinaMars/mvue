@@ -8,5 +8,6 @@
   "select": "./packages/select/index.js",
   "option": "./packages/option/index.js",
   "checkbox": "./packages/checkbox/index.js",
-  "checkbox-group": "./packages/checkbox-group/index.js"
+  "checkbox-group": "./packages/checkbox-group/index.js",
+  "toast": "./packages/toast/index.js"
 }

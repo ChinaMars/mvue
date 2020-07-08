@@ -13,6 +13,7 @@
         class="mv-checkbox-original"
         type="checkbox"
         :value="label"
+        :name="name"
         v-model="model"
         @change="handleChange"
       />
@@ -38,6 +39,10 @@ export default {
     value: {},
     label: {
       type: [String, Number],
+      default: ''
+    },
+    name: {
+      type: String,
       default: ''
     },
     checked: Boolean
@@ -68,7 +73,7 @@ export default {
       }
     },
     isChecked() {
-      if (this.isGroup) {
+      if (this.isGroup && Array.isArray(this.model)) {
         return this.model.includes(this.label)
       } else {
         return this.model
@@ -91,7 +96,6 @@ export default {
   },
   mounted() {
     console.log(this.model)
-    console.log(this.value, 'checked====')
   },
   methods: {
     handleChange(event) {

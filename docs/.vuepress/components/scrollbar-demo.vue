@@ -96,5 +96,8 @@ export default {
       line-height: 34px;
     }
   }
+  .bscroll-vertical-scrollbar{
+    z-index: 995 !important;
+  }
 }
 </style>

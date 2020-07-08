@@ -1,7 +1,7 @@
 const setAlias = require('../../config/setAlias')
 
 module.exports = {
-  title: 'Mvue Ui',
+  title: 'Mvue',
   description: 'Mvue，基于 Vue 2.0 Cli3 的桌面端组件库',
   head: [
     ['link', { rel: "icon", type: "image/png", sizes: "32x28", href: "/assets/favicons/favicon-32x28.png"}],
@@ -33,7 +33,8 @@ module.exports = {
           '/components/input',
           '/components/scrollbar',
           '/components/select',
-          '/components/checkbox'
+          '/components/checkbox',
+          '/components/toast'
         ]
       }
     ]
