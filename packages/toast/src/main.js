@@ -4,16 +4,26 @@ import main from './main.vue'
 
 const ToastConstructor = Vue.extend(main)
 
+let instance
+
 const Toast = (options = {}) => {
   if (!isServer) { return }
-  const instance = new ToastConstructor({
+  instance = new ToastConstructor({
     el: document.createElement('div'),
     data: options
   })
   document.body.appendChild(instance.$el)
-  setTimeout(() => {
-    instance.visible = false
-  }, instance.duration)
+
+  clearTimeout(instance.timer)
+  if (instance.duration > 0) {
+    instance.timer = setTimeout(() => {
+      Toast.clear()
+    }, instance.duration)
+  }
+}
+
+Toast.clear = () => {
+  instance.visible = false
 }
 
 export default Toast

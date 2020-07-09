@@ -95,11 +95,11 @@ export default {
 
   },
   mounted() {
-    console.log(this.model)
+
   },
   methods: {
     handleChange(event) {
-      console.log(event, 'event====')
+      this.$emit('change', event)
     }
   }
 }
