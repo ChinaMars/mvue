@@ -9,5 +9,6 @@
   "option": "./packages/option/index.js",
   "checkbox": "./packages/checkbox/index.js",
   "checkbox-group": "./packages/checkbox-group/index.js",
-  "toast": "./packages/toast/index.js"
+  "toast": "./packages/toast/index.js",
+  "drawer": "./packages/drawer/index.js"
 }

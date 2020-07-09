@@ -14,8 +14,8 @@ title: Dialog 对话框
 | title           | Dialog的标题                   | string  | —             | —     |
 | position        | Dialog的显示位置                 | string  | auto / center | auto  |
 | width           | Dialog的宽度                   | string  | —             | 30%   |
-| close\-by\-mask | Dialog是否通过遮罩层关闭             | boolean | true / false  | true  |
-| z\-index        | Dialog自定义层级                 | number  | —             | 1001  |
+| close-by-mask | Dialog是否通过遮罩层关闭             | boolean | true / false  | true  |
+| z-index        | Dialog自定义层级                 | number  | —             | 1001  |
 
 ### Dialog Slots
 

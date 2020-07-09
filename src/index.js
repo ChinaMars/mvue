@@ -10,6 +10,7 @@ import Option from '../packages/option/index.js'
 import Checkbox from '../packages/checkbox/index.js'
 import CheckboxGroup from '../packages/checkbox-group/index.js'
 import Toast from '../packages/toast/index.js'
+import Drawer from '../packages/drawer/index.js'
 
 const components = [
   Button,
@@ -22,7 +23,8 @@ const components = [
   Option,
   Checkbox,
   CheckboxGroup,
-  Toast
+  Toast,
+  Drawer
 ]
 
 const install = Vue => {
@@ -48,5 +50,6 @@ export default {
   Option,
   Checkbox,
   CheckboxGroup,
-  Toast
+  Toast,
+  Drawer
 }

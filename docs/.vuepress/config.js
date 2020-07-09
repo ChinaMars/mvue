@@ -34,7 +34,8 @@ module.exports = {
           '/components/scrollbar',
           '/components/select',
           '/components/checkbox',
-          '/components/toast'
+          '/components/toast',
+          '/components/drawer'
         ]
       }
     ]

@@ -13,6 +13,14 @@
         :class="positionClass"
         class="mv-drawer-container"
       >
+        <header class="mv-drawer-header">
+          <div
+            class="mv-dialog-close"
+            @click="handleClose"
+          >
+            <mv-icon name="mv-close" />
+          </div>
+        </header>
         <div class="mv-drawer-content">
           <slot></slot>
         </div>
@@ -23,8 +31,12 @@
 
 <script>
 import MaskMixin from '@src/mixins/mask'
+import Icon from '@pkg/icon'
 export default {
   name: 'MvDrawer',
+  components: {
+    [Icon.name]: Icon
+  },
   mixins: [MaskMixin],
   props: {
     visible: {
@@ -89,6 +101,15 @@ export default {
     right: 0;
     top: 0;
     width: 100%;
+  }
+
+  .mv-drawer-header {
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .mv-dialog-close {
+    float: right;
   }
 
   .mv-drawer-container {

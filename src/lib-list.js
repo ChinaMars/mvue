@@ -47,5 +47,9 @@ module.exports = {
   toast: {
     input: 'packages/toast/index.js',
     output: 'toast'
+  },
+  drawer: {
+    input: 'packages/drawer/index.js',
+    output: 'drawer'
   }
 }
