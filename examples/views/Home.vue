@@ -57,8 +57,8 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { Button, Scrollbar, Dialog } from 'mvue-ui';
+import Vue from 'vue'
+import { Button, Scrollbar, Dialog } from 'mvue-ui'
 
 Vue.use(Button)
 Vue.use(Scrollbar)

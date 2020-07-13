@@ -4,15 +4,17 @@
   "private": false,
   "main": "lib/index.common.js",
   "style": "lib/theme/index.css",
+  "typings": "types/index.d.ts",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "eslint --fix src/**/* packages/**/* build/**/* docs/**/* --quiet --no-error-on-unmatched-pattern",
-    "clean": "rimraf lib",
     "build:file": "node ./build/build.entry.js",
     "build:lib": "npm run clean && npm run build:file && cross-env NODE_ENV=production node ./build/build.lib.js",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "clean": "rimraf lib",
+    "lint": "eslint --fix src/**/* packages/**/* build/**/* docs/**/* --quiet --no-error-on-unmatched-pattern",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,8 +24,7 @@
   "files": [
     "lib",
     "src",
-    "packages",
-    "types"
+    "packages"
   ],
   "dependencies": {
     "@better-scroll/core": "^2.0.0-beta.10",
@@ -38,7 +39,10 @@
     "@vue/cli-plugin-eslint": "^4.4.0",
     "@vue/cli-service": "^4.4.0",
     "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/test-utils": "^1.0.3",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
     "babel-plugin-import": "^1.13.0",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
@@ -49,6 +53,10 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
     "highlight.js": "^10.1.1",
+    "jest": "^26.1.0",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^2.0.0",
+    "jest-watch-typeahead": "^0.6.0",
     "json-templater": "^1.2.0",
     "mvue-ui": "^0.1.5",
     "node-sass": "^4.14.1",
@@ -56,6 +64,7 @@
     "sass-loader": "^8.0.2",
     "tasksfile": "^5.1.1",
     "uppercamelcase": "^3.0.0",
+    "vue-jest": "^3.0.6",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.5.2"
   },
