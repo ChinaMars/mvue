@@ -1,6 +1,6 @@
 import Option from '../select/src/option'
 
-Option.install = function(Vue) {
+Option.install = function (Vue) {
   Vue.component(Option.name, Option)
 }
 

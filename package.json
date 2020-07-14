@@ -13,7 +13,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "clean": "rimraf lib",
-    "lint": "eslint --fix src/**/* packages/**/* build/**/* docs/**/* --quiet --no-error-on-unmatched-pattern",
+    "lint": "eslint --fix src/**/* packages/**/* build/**/* test/**/* --quiet --no-error-on-unmatched-pattern",
     "test": "jest"
   },
   "repository": {
@@ -47,6 +47,7 @@
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.18.0",
     "eslint-plugin-markdown": "^1.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",

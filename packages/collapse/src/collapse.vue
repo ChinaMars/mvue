@@ -1,6 +1,6 @@
 <template>
   <div class="mv-collapse">
-    <slot></slot>
+    <slot />
   </div>
 </template>>
 
