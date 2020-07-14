@@ -48,7 +48,7 @@
     <demo-block>
       <demo-title slot="use-title">
         <h2 slot="title-name">省市区三级联动</h2>
-        <p slot="des">填写地址时常见的省市区选择。<a href="/mock/address.json">省市区json格式</a></p>
+        <p slot="des">填写地址时常见的省市区选择。<a href="../assets/mock/address.json">省市区json格式</a></p>
       </demo-title>
       <template slot="code">
         <mv-select
