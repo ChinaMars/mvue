@@ -11,6 +11,8 @@ import Checkbox from '../packages/checkbox/index.js'
 import CheckboxGroup from '../packages/checkbox-group/index.js'
 import Toast from '../packages/toast/index.js'
 import Drawer from '../packages/drawer/index.js'
+import Collapse from '../packages/collapse/index.js'
+import CollapseItem from '../packages/collapse-item/index.js'
 
 const components = [
   Button,
@@ -24,7 +26,9 @@ const components = [
   Checkbox,
   CheckboxGroup,
   Toast,
-  Drawer
+  Drawer,
+  Collapse,
+  CollapseItem
 ]
 
 const install = Vue => {
@@ -38,7 +42,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.1.5',
+  version: '0.1.6',
   install,
   Button,
   ButtonGroup,
@@ -51,5 +55,7 @@ export default {
   Checkbox,
   CheckboxGroup,
   Toast,
-  Drawer
+  Drawer,
+  Collapse,
+  CollapseItem
 }

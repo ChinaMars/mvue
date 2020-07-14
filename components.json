@@ -10,5 +10,7 @@
   "checkbox": "./packages/checkbox/index.js",
   "checkbox-group": "./packages/checkbox-group/index.js",
   "toast": "./packages/toast/index.js",
-  "drawer": "./packages/drawer/index.js"
+  "drawer": "./packages/drawer/index.js",
+  "collapse": "./packages/collapse/index.js",
+  "collapse-item": "./packages/collapse-item/index.js"
 }

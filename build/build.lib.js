@@ -10,7 +10,7 @@ const cssFiles = []
 const build = function (data = {}, index, arr) {
   const { input, output } = data
 
-  sh(`vue-cli-service build --target lib --no-clean  --name ${output} --dest ${getAssetsPath(outputPath)} ${input}`)
+  sh(`vue-cli-service build --target lib --no-clean --name ${output} --dest ${getAssetsPath(outputPath)} ${input}`)
 
   if (fsExistsSync(getAssetsPath(outputPath, `${output}.css`))) {
     cssFiles.push(`${output}.css`)

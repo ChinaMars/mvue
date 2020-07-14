@@ -51,5 +51,13 @@ module.exports = {
   drawer: {
     input: 'packages/drawer/index.js',
     output: 'drawer'
+  },
+  collapse: {
+    input: 'packages/collapse/index.js',
+    output: 'collapse'
+  },
+  'collapse-item': {
+    input: 'packages/collapse-item/index.js',
+    output: 'collapse-item'
   }
 }
