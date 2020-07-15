@@ -36,6 +36,7 @@ export default {
           <mv-icon name="mv-arrow-up" />
           <mv-icon name="mv-arrow-left" />
           <mv-icon name="mv-arrow-right" />
+          <mv-icon name="mv-selected" />
         `
       }
     }

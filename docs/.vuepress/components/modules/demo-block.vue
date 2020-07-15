@@ -39,7 +39,6 @@ export default {
   watch: {
     isExpanded(val) {
       this.codeArea.style.height = val ? `${this.codeAreaHeight}px` : '0'
-      console.log(this.codeAreaHeight, 'codeAreaHeight')
       if (!val) {
 
       }
