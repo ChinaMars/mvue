@@ -2,7 +2,12 @@
   <button
     class="mv-button"
     :type="type"
-    :class="`mv-button-${typeStyle}`"
+    :class="
+      [
+        `mv-button-${typeStyle}`,
+        isDisabled
+      ]
+    "
     @click="handleClick"
   >
     <i
@@ -31,10 +36,16 @@ export default {
     icon: {
       type: String,
       default: ''
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
-
+    isDisabled () {
+      return this.disabled ? 'disabled' : ''
+    }
   },
   methods: {
     handleClick () {
@@ -63,7 +74,7 @@ export default {
     user-select: none;
     white-space: nowrap;
 
-    &:disabled {
+    &.disabled {
       cursor: not-allowed;
     }
   }

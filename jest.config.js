@@ -25,7 +25,7 @@ module.exports = {
   ],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "./tests/coverage",
+  coverageDirectory: './tests/coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -37,9 +37,9 @@ module.exports = {
 
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: [
-    "text-summary",
-    "lcov",
-    "clover"
+    'text-summary',
+    'lcov',
+    'clover'
   ],
 
   // An object that configures minimum threshold enforcement for coverage results
@@ -73,15 +73,15 @@ module.exports = {
 
   // An array of file extensions your modules use
   moduleFileExtensions: [
-    "js",
-    "json",
-    "jsx",
-    "vue"
+    'js',
+    'json',
+    'jsx',
+    'vue'
   ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
-    "^@src/(.*)$": "<rootDir>/src/$1",
+    '^@src/(.*)$': '<rootDir>/src/$1',
     '^@pkg/(.*)$': '<rootDir>/packages/$1'
   },
 
@@ -136,7 +136,7 @@ module.exports = {
   snapshotSerializers: ['jest-serializer-vue'],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -146,8 +146,8 @@ module.exports = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    "**/__tests__/**/*.[jt]s?(x)",
-    "**/?(*.)+(spec|test).[tj]s?(x)"
+    '**/__tests__/**/*.[jt]s?(x)',
+    '**/?(*.)+(spec|test).[tj]s?(x)'
   ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
@@ -165,7 +165,7 @@ module.exports = {
   // testRunner: "jasmine2",
 
   // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
-  testURL: "http://localhost",
+  testURL: 'http://localhost',
 
   // Setting this value to "fake" allows the use of fake timers for functions such as "setTimeout"
   // timers: "real",
@@ -179,7 +179,7 @@ module.exports = {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: [
-    "/node_modules/"
+    '/node_modules/'
   ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
@@ -193,4 +193,15 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+
+  watchPlugins: [
+    [
+      'jest-watch-typeahead/filename',
+      {
+        key: 'k',
+        prompt: 'do something with my custom prompt'
+      }
+    ],
+    'jest-watch-typeahead/testname'
+  ]
+}
