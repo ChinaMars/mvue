@@ -7,20 +7,23 @@
       :class="{'checked': isChecked}"
     >
       <span class="mv-checkbox-icon">
-        <mv-icon v-show="isChecked" name="mv-selected"></mv-icon>
+        <mv-icon
+          v-show="isChecked"
+          name="mv-selected"
+        />
       </span>
       <input
+        v-model="model"
         class="mv-checkbox-original"
         type="checkbox"
         :value="label"
         :name="name"
-        v-model="model"
         @change="handleChange"
-      />
+      >
     </span>
     <span
-      class="mv-checkbox-label"
       v-if="$slots.default"
+      class="mv-checkbox-label"
     >
       <slot />
     </span>
@@ -36,7 +39,10 @@ export default {
     [Icon.name]: Icon
   },
   props: {
-    value: {},
+    value: {
+      type: [String, Number, Boolean],
+      default: null
+    },
     label: {
       type: [String, Number],
       default: ''
@@ -47,58 +53,57 @@ export default {
     },
     checked: Boolean
   },
-  data() {
+  data () {
     return {
 
     }
   },
-  watch: {
-
-  },
   computed: {
     model: {
-      get() {
+      get () {
         if (this.isGroup) {
-          return this._checkboxGroup.value
+          return this.checkBoxGroup.value
         } else {
           return this.value
         }
       },
-      set(val) {
+      set (val) {
         if (this.isGroup) {
-          this._checkboxGroup.$emit('input', val)
+          this.checkBoxGroup.$emit('input', val)
         } else {
           this.$emit('input', val)
         }
       }
     },
-    isChecked() {
+    isChecked () {
       if (this.isGroup && Array.isArray(this.model)) {
         return this.model.includes(this.label)
       } else {
         return this.model
       }
     },
-    checkboxGroup() {
-
-    },
-    isGroup() {
+    checkBoxGroup () {
       const getCompontent = findCompontent(this, 'MvCheckboxGroup')
-      if (getCompontent) {
-        this._checkboxGroup = getCompontent;
+      return getCompontent
+    },
+    isGroup () {
+      if (this.checkBoxGroup) {
         return true
       }
       return false
     }
   },
-  created() {
+  watch: {
 
   },
-  mounted() {
+  created () {
+
+  },
+  mounted () {
 
   },
   methods: {
-    handleChange(event) {
+    handleChange (event) {
       this.$emit('change', event)
     }
   }
